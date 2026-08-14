@@ -1,0 +1,60 @@
+{
+  "input_file": "intervals.json",
+  "K": 5000,
+  "arb_precision_bits": 256,
+  "passed": true,
+  "quantities": {
+    "gamma": {
+      "passed": true,
+      "min_lower_recurrence_slack": "[3.979822100000000000000000000000000000000e-9 +/- 1e-53]",
+      "min_upper_recurrence_slack": "[3.979253800000000000000000000000000000000e-9 +/- 3e-53]",
+      "counters": {},
+      "c_gamma_lower": "[0.4994507727783937484766125726149439835619 +/- 4.86e-41]",
+      "c_gamma_upper": "[0.4996662905439521200000000000000000000000 +/- 3e-45]",
+      "lower_goal": "not checked",
+      "lower_goal_slack": "not checked",
+      "upper_goal": "0.49967",
+      "upper_goal_slack": "[3.709456047880000000000000000000000000000e-6 +/- 1e-50]",
+      "manuscript_use": "upper bounds c_typ"
+    },
+    "beta_plus": {
+      "passed": true,
+      "min_lower_recurrence_slack": "[3.395595157121556190124200315371652711400e-9 +/- 2.45e-49]",
+      "min_upper_recurrence_slack": "[3.395558998717592693871141735569032377645e-9 +/- 1.31e-49]",
+      "counters": {},
+      "c_plus_lower": "[0.5054731461429961958018314353526015452778 +/- 2.71e-41]",
+      "c_plus_upper": "[0.5056753576203792400000000000000000000000 +/- 3e-45]",
+      "lower_goal": "0.50547",
+      "lower_goal_slack": "[3.146142996195801831435352601545277827058e-6 +/- 6.38e-47]",
+      "upper_goal": "0.50568",
+      "upper_goal_slack": "[4.642379620760000000000000000000000000000e-6 +/- 1e-50]"
+    },
+    "beta_minus": {
+      "passed": true,
+      "min_lower_recurrence_slack": "[3.997950140000000000000000000000000000000e-8 +/- 1e-52]",
+      "min_upper_recurrence_slack": "[3.997957430000000000000000000000000000000e-8 +/- 3e-52]",
+      "counters": {
+        "lower_screened_terms": 6036322,
+        "lower_exact_terms": 216177,
+        "upper_exact_terms": 4999
+      },
+      "c_minus_lower": "0.2500000000000000000000000000000000000000",
+      "c_minus_upper": "[0.4886678999987246800000000000000000000000 +/- 3e-45]",
+      "lower_goal": "not checked",
+      "lower_goal_slack": "not checked",
+      "upper_goal": "0.48867",
+      "upper_goal_slack": "[2.100001275320000000000000000000000000000e-6 +/- 1e-50]",
+      "lower_bound_source": "analytic bound c_minus >= 1/4 from the manuscript"
+    }
+  },
+  "derived_bounds": {
+    "c_typ_lower_from_beta_minus": {
+      "passed": true,
+      "cutoff": 312,
+      "lower_bound": "[0.4893404633455635327105864839409374883879 +/- 1.20e-41]",
+      "lower_goal": "0.48934",
+      "lower_goal_slack": "[4.633455635327105864839409374883879119231e-7 +/- 8.39e-48]",
+      "source": "certified lower endpoints for beta_minus and the finite lower bound proved in the manuscript"
+    }
+  }
+}
