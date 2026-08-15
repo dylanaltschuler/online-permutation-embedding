@@ -1,6 +1,8 @@
 # Numerical certificates for the scaling constants
 
-This supplement matches the file names used in the manuscript:
+The repository concerns the finite interval-arithmetic certificates in the manuscript. The manuscript uses these certified computations together with separate analytic arguments to obtain rigorous estimates on some scaling limits. 
+
+Contained files:
 
 ```text
 intervals.json   candidate interval enclosures for gamma, beta_plus, beta_minus
@@ -8,8 +10,6 @@ certify.py       rigorous FLINT/Arb checker
 slacks.json      recorded certification slacks and finite bounds
 generate_candidates.py   optional non-rigorous interval generator
 ```
-
-The repository concerns only the finite interval-arithmetic certificates. The manuscript uses these certified computations together with separate analytic arguments.
 
 ## Requirement
 
@@ -28,7 +28,7 @@ $py = "C:\path\to\envs\cert\python.exe"
 
 ## Recurrences checked
 
-All three dynamic programs use the same scalar kernel
+All three dynamic programs (defining beta_k^+, beta_k^-, and gamma_k) use the same scalar kernel
 
 ```text
 G(p,q) = min_{0 <= a < b <= 1}
